@@ -15,12 +15,12 @@ substitutions:
   #设备名称（多个dc1改成不一样的，API接入和ESPHOME容器会识别这个）
   device_name: phicomm_dc1_1
   #MQTT设备名称（多个dc1改成不一样的，MQTT接入及控制会识别这个）
-  mqtt_device_name: ChilerenRoom
+  mqtt_device_name: Room_1
   ### 这里之所以会取2个设备名称独立开来，是为了便于通过MQTT接入服务端（如ioBroker）后的设备分类和集中
   #WiFi_SSID名称
-  wifi_ssid: '777'
+  wifi_ssid: 'XGDZLJ'
   #WiFi密码
-  wifi_password: '1122334455'
+  wifi_password: 'lijia00001'
   #如果SSID是隐藏的，设置为true
   wifi_fast_connect: 'false'
   #WiFi离线多久后重启设备，秒s/分钟min/小时h，不需要此功能设置为0s，建议设置0s，防止异常重启，或者设置的大一些
@@ -28,15 +28,15 @@ substitutions:
   #OTA密码
   ota_password: '123456'
   #电量统计的数据刷新时间（内部刷新时间，非上报周期），秒s/分钟min/小时h
-  cse7766_update_interval: 1s
+  cse7766_update_interval: 10min
   #MQTT代理服务器IP地址
-  mqtt_broker: '192.168.88.115'
+  mqtt_broker: 'xgdzlj.wicp.net'
   #MQTT代理服务器端口
   mqtt_port: '1883'
   #MQTT代理服务器用户名
-  #mqtt_username: '1'
+  #mqtt_username: 'lijia'
   #MQTT代理服务器密码
-  #mqtt_password: '1'
+  #mqtt_password: 'lijia00001'
   #与MQTT服务端失去连接多久后重启设备，秒s/分钟min/小时h，不需要此功能设置为0s，建议设置0s，防止异常重启，或者设置的大一些
   mqtt_reboot_timeout: 0s
   #保持MQTT socket存活时间
@@ -78,11 +78,11 @@ wifi:
   password: $wifi_password
 #----------需要设置静态地址的改下面的配置------------
 #  manual_ip:
-#    static_ip: 192.168.178.230
-#    gateway: 192.168.178.1
+#    static_ip: 192.168.1.122
+#    gateway: 192.168.1.1
 #    subnet: 255.255.255.0
-#    dns1: 1.1.1.1
-#    dns2: 1.2.2.1
+#    dns1: 222.85.85.85
+#    dns2: 222.88.88.88
 #--------------------------------------------------
   domain: .local
   reboot_timeout: $wifi_reboot_timeout
